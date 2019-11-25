@@ -1,0 +1,12 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: { type: external, minified: true }
+      css/style.css: {}
+  js:
+     https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {type: external, minified: true }
+     js/global.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
