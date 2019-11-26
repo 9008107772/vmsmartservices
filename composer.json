@@ -9,7 +9,8 @@
 		"drupal/admin_toolbar": "^2.0",
 		 "drupal/address": "^1.7",
         "drupal/field_group": "^3.0",
-        "drupal/toolbar_menu": "^2.1"
+        "drupal/toolbar_menu": "^2.1",
+        "drupal/toolbar_visibility": "^1.2"
     },
     "replace": {
         "drupal/core": "^8.7"
