@@ -10,7 +10,7 @@
 		 "drupal/address": "^1.7",
         "drupal/field_group": "^3.0",
         "drupal/toolbar_menu": "^2.1",
-        "drupal/toolbar_visibility": "^1.2"
+        "drupal/back_to_top": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.7"
