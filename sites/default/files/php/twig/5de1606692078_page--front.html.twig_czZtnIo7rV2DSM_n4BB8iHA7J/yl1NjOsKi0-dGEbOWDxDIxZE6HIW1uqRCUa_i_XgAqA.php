@@ -234,25 +234,46 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-xl-12\">
                     <div class=\"brand-active owl-carousel\">
                         <div class=\"single-brand\">
-                            <img src=\"img/brand/1.png\" alt=\"\">
+                            <img src=\"/";
+        // line 177
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/brand/1.png\" alt=\"\">
                         </div>
                         <div class=\"single-brand\">
-                            <img src=\"img/brand/2.png\" alt=\"\">
+                            <img src=\"/";
+        // line 180
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/brand/2.png\" alt=\"\">
                         </div>
                         <div class=\"single-brand\">
-                            <img src=\"img/brand/3.png\" alt=\"\">
+                            <img src=\"/";
+        // line 183
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/brand/3.png\" alt=\"\">
                         </div>
                         <div class=\"single-brand\">
-                            <img src=\"img/brand/4.png\" alt=\"\">
+                            <img src=\"/";
+        // line 186
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/brand/4.png\" alt=\"\">
                         </div>
                         <div class=\"single-brand\">
-                            <img src=\"img/brand/5.png\" alt=\"\">
+                            <img src=\"/";
+        // line 189
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/brand/5.png\" alt=\"\">
                         </div>
                         <div class=\"single-brand\">
-                            <img src=\"img/brand/6.png\" alt=\"\">
+                            <img src=\"/";
+        // line 192
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/brand/6.png\" alt=\"\">
                         </div>
                         <div class=\"single-brand\">
-                            <img src=\"img/brand/4.png\" alt=\"\">
+                            <img src=\"/";
+        // line 195
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/brand/4.png\" alt=\"\">
                         </div>
                     </div>
                 </div>
@@ -275,7 +296,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-xl-4 col-md-4\">
                     <div class=\"single-service\">
                         <div class=\"service-thumb\">
-                            <img src=\"img/service/1.jpg\" alt=\"\">
+                            <img src=\"/";
+        // line 218
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/service/1.jpg\" alt=\"\">
                         </div>
                         <h3>Industrial construction</h3>
                         <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
@@ -285,7 +309,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-xl-4 col-md-4\">
                     <div class=\"single-service\">
                         <div class=\"service-thumb\">
-                            <img src=\"img/service/2.jpg\" alt=\"\">
+                            <img src=\"/";
+        // line 228
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/service/2.jpg\" alt=\"\">
                         </div>
                         <h3>Mechanical engineering</h3>
                         <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
@@ -295,7 +322,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-xl-4 col-md-4\">
                     <div class=\"single-service\">
                         <div class=\"service-thumb\">
-                            <img src=\"img/service/1.jpg\" alt=\"\">
+                            <img src=\"/";
+        // line 238
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/service/1.jpg\" alt=\"\">
                         </div>
                         <h3>Bridge construction</h3>
                         <p>Waters make fish every without firmament saw had. Morning air subdue.</p>
@@ -325,7 +355,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                     <div class=\"project-active owl-carousel\">
                         <div class=\"single-project\">
                             <div class=\"project-thumb\">
-                                <img src=\"img/project/1.jpg\" alt=\"\">
+                                <img src=\"/";
+        // line 268
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/project/1.jpg\" alt=\"\">
                             </div>
                             <div class=\"project-info\">
                                 <span>Industrial construction</span>
@@ -334,7 +367,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                         </div>
                         <div class=\"single-project\">
                             <div class=\"project-thumb\">
-                                <img src=\"img/project/1.jpg\" alt=\"\">
+                                <img src=\"/";
+        // line 277
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/project/1.jpg\" alt=\"\">
                             </div>
                             <div class=\"project-info\">
                                 <span>Machine engineering</span>
@@ -343,7 +379,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                         </div>
                         <div class=\"single-project\">
                             <div class=\"project-thumb\">
-                                <img src=\"img/project/1.jpg\" alt=\"\">
+                                <img src=\"/";
+        // line 286
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/project/1.jpg\" alt=\"\">
                             </div>
                             <div class=\"project-info\">
                                 <span>Industrial construction</span>
@@ -352,7 +391,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                         </div>
                         <div class=\"single-project\">
                             <div class=\"project-thumb\">
-                                <img src=\"img/project/1.jpg\" alt=\"\">
+                                <img src=\"/";
+        // line 295
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/project/1.jpg\" alt=\"\">
                             </div>
                             <div class=\"project-info\">
                                 <span>Machine engineering</span>
@@ -369,13 +411,19 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
     <!-- about start -->
     <div class=\"about-area section-padding\">
         <div class=\"pattent-bg-img\">
-            <img src=\"img/about/pattern.png\" alt=\"\">
+            <img src=\"/";
+        // line 312
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/pattern.png\" alt=\"\">
         </div>
         <div class=\"container\">
             <div class=\"row align-items-center\">
                 <div class=\"col-xl-7 col-md-12 col-lg-6\">
                     <div class=\"about-thumb\">
-                        <img src=\"img/about/about.jpg\" alt=\"\">
+                        <img src=\"/";
+        // line 318
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/about.jpg\" alt=\"\">
                         <a class=\"video-icon popup-video\" href=\"https://www.youtube.com/watch?v=vb9uYBtqmeM\">
                             <i class=\"fa fa-play\"></i>
                         </a>
@@ -412,7 +460,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                                 very one. Whales grass is fish whales winged.</p>
                             <div class=\"about-author\">
                                 <div class=\"autor-thumb\">
-                                    <img src=\"img/about/about-author.jpg\" alt=\"\">
+                                    <img src=\"/";
+        // line 355
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/about-author.jpg\" alt=\"\">
                                 </div>
                                 <div class=\"auhor-text\">
                                     <span>Jon Snow</span>
@@ -423,7 +474,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                     </div>
                     <div class=\"col-xl-5 offset-xl-1 col-md-6\">
                         <div class=\"about-review\">
-                            <img src=\"img/about/about-project.jpg\" alt=\"\">
+                            <img src=\"/";
+        // line 366
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/about-project.jpg\" alt=\"\">
                             <div class=\"project-review\">
                                 <h3>350+</h3>
                                 <p>Positive review</p>
@@ -448,7 +502,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                                 very one. Whales grass is fish whales winged.</p>
                             <div class=\"about-author\">
                                 <div class=\"autor-thumb\">
-                                    <img src=\"img/about/about-author.jpg\" alt=\"\">
+                                    <img src=\"/";
+        // line 391
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/about-author.jpg\" alt=\"\">
                                 </div>
                                 <div class=\"auhor-text\">
                                     <span>Jon Snow</span>
@@ -459,7 +516,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                     </div>
                     <div class=\"col-xl-5 offset-xl-1 col-md-6\">
                         <div class=\"about-review\">
-                            <img src=\"img/about/about-project.jpg\" alt=\"\">
+                            <img src=\"/";
+        // line 402
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/about-project.jpg\" alt=\"\">
                             <div class=\"project-review\">
                                 <h3>350+</h3>
                                 <p>Positive review</p>
@@ -484,7 +544,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                                 very one. Whales grass is fish whales winged.</p>
                             <div class=\"about-author\">
                                 <div class=\"autor-thumb\">
-                                    <img src=\"img/about/about-author.jpg\" alt=\"\">
+                                    <img src=\"/";
+        // line 427
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/about-author.jpg\" alt=\"\">
                                 </div>
                                 <div class=\"auhor-text\">
                                     <span>Jon Snow</span>
@@ -495,7 +558,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                     </div>
                     <div class=\"col-xl-5 offset-xl-1 col-md-6\">
                         <div class=\"about-review\">
-                            <img src=\"img/about/about-project.jpg\" alt=\"\">
+                            <img src=\"/";
+        // line 438
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/about/about-project.jpg\" alt=\"\">
                             <div class=\"project-review\">
                                 <h3>350+</h3>
                                 <p>Positive review</p>
@@ -535,7 +601,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-xl-4 col-md-4\">
                     <div class=\"single-address text-center\">
                         <div class=\"addres-icon\">
-                            <img src=\"img/icon/1.png\" alt=\"\">
+                            <img src=\"/";
+        // line 478
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/icon/1.png\" alt=\"\">
                         </div>
                         <h3>Our Location</h3>
                         <p>127, Manchaster city, London <br>
@@ -546,7 +615,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-xl-4 col-md-4\">
                     <div class=\"single-address text-center\">
                         <div class=\"addres-icon\">
-                            <img src=\"img/icon/2.png\" alt=\"\">
+                            <img src=\"/";
+        // line 489
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/icon/2.png\" alt=\"\">
                         </div>
                         <h3>Opening hour</h3>
                         <p>Mon-Fri (9.00-19.00) <br>
@@ -556,7 +628,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-xl-4 col-md-4\">
                     <div class=\"single-address text-center\">
                         <div class=\"addres-icon\">
-                            <img src=\"img/icon/3.png\" alt=\"\">
+                            <img src=\"/";
+        // line 499
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/icon/3.png\" alt=\"\">
                         </div>
                         <h3>Drop a message</h3>
                         <p>support@durg.com <br>
@@ -575,7 +650,10 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
             <div class=\"row justify-content-between\">
                 <div class=\"col-sm-6 col-md-3 col-xl-4\">
                     <div class=\"single-footer-widget footer_1\">
-                        <a href=\"index.html\"> <img src=\"img/footer-logo.png\" alt=\"\"> </a>
+                        <a href=\"index.html\"> <img src=\"/";
+        // line 518
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
+        echo "/img/footer-logo.png\" alt=\"\"> </a>
                         <p>Waters make fish every without firmament saw had. Morning air subdue very one. Whales grass
                             is fish whales winged.</p>
                         <div class=\"social-links\">
@@ -639,7 +717,7 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                 <div class=\"col-lg-12\">
                     <div class=\"copyright_part_text text-center\">
                         <p class=\"footer-text m-0\"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Vijay Murugan Enterprises
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>
@@ -667,7 +745,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     public function getDebugInfo()
     {
-        return array (  112 => 53,  68 => 12,  55 => 1,);
+        return array (  655 => 518,  633 => 499,  620 => 489,  606 => 478,  563 => 438,  549 => 427,  521 => 402,  507 => 391,  479 => 366,  465 => 355,  425 => 318,  416 => 312,  396 => 295,  384 => 286,  372 => 277,  360 => 268,  327 => 238,  314 => 228,  301 => 218,  275 => 195,  269 => 192,  263 => 189,  257 => 186,  251 => 183,  245 => 180,  239 => 177,  112 => 53,  68 => 12,  55 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
