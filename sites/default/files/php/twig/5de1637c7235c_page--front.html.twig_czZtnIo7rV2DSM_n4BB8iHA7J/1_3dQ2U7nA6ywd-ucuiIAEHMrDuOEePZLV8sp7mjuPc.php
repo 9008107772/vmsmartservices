@@ -653,7 +653,7 @@ class __TwigTemplate_726373d2602d963a29174467b226db9470ffcc44366be66336d3afbc46b
                         <a href=\"index.html\"> <img src=\"/";
         // line 518
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["directory"] ?? null)), "html", null, true);
-        echo "/img/footer-logo.png\" alt=\"\"> </a>
+        echo "/footer-logo.jpg\" alt=\"\" class=\"img-thumbnail\"> </a>
                         <p>Waters make fish every without firmament saw had. Morning air subdue very one. Whales grass
                             is fish whales winged.</p>
                         <div class=\"social-links\">
