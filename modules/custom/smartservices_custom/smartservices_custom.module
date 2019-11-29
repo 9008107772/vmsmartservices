@@ -1,0 +1,26 @@
+<?php
+/**
+ * Implements hook_toolbar_alter().
+ */
+function smartservices_custom_toolbar_alter(&$items) {
+	$current_route = \Drupal::routeMatch()->getRouteName();
+	$current_theme_name = \Drupal::theme()->getActiveTheme()->getName();
+	$theme_to_exclude_toolbar = array('smartservices' => 'smartservices');
+	if ($theme_to_exclude_toolbar) {
+		foreach ($theme_to_exclude_toolbar as $key => $theme_name) {
+		  if ($theme_name == $current_theme_name) {
+			unset($items['administration']);
+			unset($items['shortcuts']);
+			unset($items['admin_toolbar_tools']);
+			unset($items['administration_search']);
+			unset($items['user']);
+			unset($items['devel']);
+			unset($items['contextual']);
+			unset($items['home']);
+			unset($items['tour']);
+			
+		  }
+		}
+	}
+}
+
