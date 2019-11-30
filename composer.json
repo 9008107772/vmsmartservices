@@ -11,7 +11,8 @@
         "drupal/field_group": "^3.0",
         "drupal/toolbar_menu": "^2.1",
         "drupal/back_to_top": "^1.0",
-        "drupal/devel": "^2.1"
+        "drupal/devel": "^2.1",
+        "drupal/paragraphs": "^1.10"
     },
     "replace": {
         "drupal/core": "^8.7"

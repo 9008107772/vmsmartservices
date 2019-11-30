@@ -18,6 +18,7 @@ function smartservices_custom_toolbar_alter(&$items) {
 			unset($items['contextual']);
 			unset($items['home']);
 			unset($items['tour']);
+			unset($items['toolbar_menu_site_menus']);
 			
 		  }
 		}
