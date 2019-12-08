@@ -52,13 +52,13 @@
 #}
 <div id="page-wrapper">
   <div id="page">
-    <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
-      <div class="section layout-container clearfix">
-        {{ page.secondary_menu }}
-        {{ page.header }}
-        {{ page.primary_menu }}
-      </div>
-    </header>
+    <!--<header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
+      <div class="section layout-container clearfix">-->
+        {# page.secondary_menu {#}
+        {# page.header {#}
+        {# page.primary_menu {#}
+      <!--</div>
+    </header>-->
     {% if page.highlighted %}
       <div class="highlighted">
         <aside class="layout-container section clearfix" role="complementary">
@@ -107,7 +107,7 @@
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
+    <!--<footer class="site-footer">
       <div class="layout-container">
         {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
           <div class="site-footer__top clearfix">
@@ -123,6 +123,6 @@
           </div>
         {% endif %}
       </div>
-    </footer>
+    </footer>-->
   </div>
 </div>
