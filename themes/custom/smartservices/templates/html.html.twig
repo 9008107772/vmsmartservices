@@ -1,0 +1,142 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain one or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }} class="no-js" lang="English">
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/{{ directory }}/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+  </head>
+  <body{{ attributes }}>
+    {#
+      Keyboard navigation/accessibility link to main content section in
+      page.html.twig.
+    #}
+	<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <!---<div class="header-top black-bg d-none d-md-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-lg-6">
+                            <div class="header-contact">
+                                <a href="#"><i class="fa fa-phone"></i> +880 256 356 256</a>
+                                <a href="#"><i class="fa fa-envelope"></i> support24@durg.com</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-6">
+                            <div class="header-top-menu">
+                                <nav>
+                                    <ul>
+                                        <li><a href="blog.html">News & media</a></li>
+                                        <li><a href="review.html">Review</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div id="sticky-header" class="main-header-area white-bg">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+								{{ page.header }}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="main-menu d-none d-lg-block">
+									{{ page.primary_menu }}
+                            </div>
+                        </div>
+                        <!--<div class="col-xl-3 col-lg-3">
+                            <div class="quote-area">
+                                <div class="search-bar">
+                                    <a id="search_1" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                                </div>
+                                <div class="get-quote d-none d-lg-block">
+                                    <a class="boxed-btn" href="#">Get a quote</a>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                    <!--<div class="search_input" id="search_input_box">
+                        <div class="container ">
+                            <form class="d-flex justify-content-between search-inner">
+                                <input type="text" class="form-control" id="search_input" placeholder="Search Here">
+                                <button type="submit" class="btn"></button>
+                                <span class="fa fa-close" id="close_search" title="Close Search"></span>
+                            </form>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!--<a href="#main-content" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>-->
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+	<!-- footer-start -->
+    <footer class="footer-area ">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="copyright_part_text text-center">
+                        <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Vijay Murugan Enterprises
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>

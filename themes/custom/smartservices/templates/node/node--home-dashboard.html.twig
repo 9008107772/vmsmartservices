@@ -1,0 +1,285 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: (optional) The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: (optional) Themed creation date field.
+ * - author_name: (optional) Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+    <!-- slider-area-start -->
+    <div class="slider-area">
+        <div class="slider-active owl-carousel">
+		{% for i, home_carousel_panel in node.field_home_carousel_panel  %}
+            <div class="single-slider" style="background-image:url({{file_url(home_carousel_panel.entity.field_banner_image.entity.uri.value)}})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 offset-xl-1 col-lg-7">
+                            <div class="slider-content">
+                                <p>{{home_carousel_panel.entity.field_banner_title.value}}</p>
+                                <h3>{{home_carousel_panel.entity.field_banner_description.value}}</h3>
+                                <div class="slider-btn">
+                                    <a class="boxed-btn2" href='{{home_carousel_panel.entity.field_banner_link.uri | replace({"internal:" : "","entity:" : ""}) }}'>{{home_carousel_panel.entity.field_banner_link.title}}<i
+                                            class="Flaticon flaticon-right-arrow"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		{% endfor %}
+           
+        </div>
+    </div>
+    <!-- slider-area-end -->
+
+    <!-- brand-area-start -->
+    <div class="brand-area gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="brand-active owl-carousel">
+						{% for i, home_carousel_services_panel in node.field_home_carousel_services_pan  %}
+                        <div class="single-brand">
+                            <img src="{{file_url(home_carousel_services_panel.entity.field_service_image.entity.uri.value)}}" alt="">
+                        </div>
+						{% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- brand-area-end -->
+
+    <!-- service-area-start -->
+    <div class="service-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="section-title text-center mb-65">
+                    <span>{{node.field_our_service_title.value}}</span>
+                    <h3>{{node.field_our_service_description.value|raw}}</h3>
+                </div>
+            </div>
+            <div class="row">
+			{% for i, home_our_services_panel in node.field_home_our_services_panel  %}
+                <div class="col-xl-4 col-md-4">
+                    <div class="single-service">
+                        <div class="service-thumb">
+                            <img src="{{file_url(home_our_services_panel.entity.field_service_image.entity.uri.value)}}" alt="" class="img-thumbnail">
+                        </div>
+                        <h3>{{home_our_services_panel.entity.field_banner_title.value}}</h3>
+                        {{home_our_services_panel.entity.field_description.value|raw}}
+                        <a href='{{home_our_services_panel.entity.field_service_link.uri | replace({"internal:" : "","entity:" : ""}) }}' class="boxed-btn">{{ home_our_services_panel.entity.field_service_link.title }}</a>
+                    </div>
+                </div>
+			{% endfor %}
+              
+            </div>
+        </div>
+    </div>
+    <!-- service-area-end -->
+
+    <!-- project-area-start -->
+    <div class="project-area overlay" style="background-image:url({{file_url(node.field_image.entity.uri.value)}})">
+        <div class="container-fluid p-lg-0">
+            <div class="row justify-content-end no-gutters">
+                <div class="col-xl-4 col-md-6">
+                    <div class="section-title text-white mb-65 ml-80">
+                        <h3>{{node.field_service_title.value}}</h3>
+                        <p>{{node.field_service_description.value|raw}}</p>
+                        <div class="boxed-btn">
+                            <a href='{{node.entity.field_service_link.uri | replace({"internal:" : "","entity:" : ""}) }}'>{{ node.field_service_link.title }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="project-active owl-carousel">
+					{% for i, home_our_services_carousel  in node.field_home_our_services_carousel  %}
+                        <div class="single-project">
+                            <div class="project-thumb">
+                                <img src="{{file_url(home_our_services_carousel.entity.field_banner_image.entity.uri.value)}}" alt="">
+                            </div>
+                            <div class="project-info">
+                                <span>{{home_our_services_carousel.entity.field_banner_title.value}}</span>
+                                <h3>{{home_our_services_carousel.entity.field_description.value|raw}}</h3>
+                            </div>
+                        </div>
+					{% endfor %}
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- project-area-end -->
+
+    <!-- about start -->
+    <div class="about-area section-padding">
+        <div class="pattent-bg-img">
+            <img src="/{{ directory }}/img/about/pattern.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-md-12 col-lg-6">
+                    <div class="about-thumb">
+                        <img src="{{file_url(node.field_about_image.entity.uri.value)}}" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-5 col-md-12 col-lg-6">
+                    <div class="section-title mb-65">
+                        <span>{{node.field_about_title.value}}</span>
+                        <h3>{{node.field_about_sub_title.value}}</h3>
+                        <p class="para-text">
+                           {{node.field_ab.value|raw}}
+                        </p>
+                        <a href='{{node.field_about_link.uri | replace({"internal:" : "","entity:" : ""}) }}' class="boxed-btn">{{ node.field_about_link.title }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="about-pro-active owl-carousel pt-120">
+			
+			{% for i, home_comments_panel  in node.field_home_comments_panel  %}
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-md-6 col-lg-6 ">
+                        <div class="about-info-text">
+                            <div class="quote">
+                                <i class="Flaticon flaticon-quote"></i>
+                            </div>
+                            <!--<div class="about-ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>-->
+                            <div class="about-text">{{home_comments_panel.entity.field_description.value|raw}}</div>
+                            <div class="about-author">
+                                <div class="autor-thumb">
+                                    <img src="{{file_url(home_comments_panel.entity. 	field_photo.entity.uri.value)}}" alt="">
+                                </div>
+                                <div class="auhor-text">
+                                    <span>{{home_comments_panel.entity.field_name.value}}</span>
+                                    <p>{{home_comments_panel.entity.field_designation.value}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			{% endfor %}
+             
+             
+            </div>
+        </div>
+    </div>
+    <!-- about end -->
+
+    <!-- cta-area-start -->
+    <!--<div class="cta-area cta-bg-1">
+        <div class="container">
+            <div class="col-xl-6 col-lg-7">
+                <div class="cta-content">
+                    <h3>Let’s talk about your <br>
+                        industrial problems</h3>
+                    <p>Waters make fish every without firmament saw had. <br> Morning air subdue very one. Whales grass
+                        is
+                        fish <br> whales winged.</p>
+                    <div class="cta-btn">
+                        <a class="boxed-btn2 black-bg" href="#">Discuss now <i
+                                class="Flaticon flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- cta-area-end -->
+
+    <!-- location-area-start -->
+    <div class="addres-area black-bg section-padding">
+        <div class="container">
+            <div class="row">
+			{% for i, home_contact_panel  in node.field_home_contact_panel  %}
+                <div class="col-xl-4 col-md-4">
+                    <div class="single-address text-center">
+                        <div class="addres-icon">
+                            <img src="{{file_url(home_contact_panel.entity. 	field_contact_image.entity.uri.value)}}" alt="">
+                        </div>
+                        <h3>{{home_contact_panel.entity.field_contact_title.value}}</h3>
+                        <p>{{home_contact_panel.entity.field_description.value|raw}}</p>
+                        <!--<a class="underline-hover" href="#">Get Direction</a>-->
+                    </div>
+                </div>
+			{% endfor %}
+                
+            </div>
+        </div>
+    </div>
+    <!-- location-area-end -->
+
+</article>
+
