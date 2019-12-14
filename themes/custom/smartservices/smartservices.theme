@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bartik theme.
+ */
+use Drupal\node\Entity\Node;
+function smartservices_preprocess(&$variables, $hook) {
+	$nids = \Drupal::entityQuery('node')->condition('type','global_contact')->execute();
+	$field_address_details = '';
+	$field_mobile_details = '';
+	$field_email_details = '';
+	foreach($nids as $key=>$value){
+		$nodes =  \Drupal::entityManager()->getStorage('node')->load($value);
+		$field_address_details = $nodes->field_address_details->value;
+		$field_mobile_details = $nodes->field_mobile_details->value;
+		$field_email_details = $nodes->field_email_details->value;
+	}
+	$variables['field_address_details'] = $field_address_details;
+	$variables['field_mobile_details'] = $field_mobile_details;
+	$variables['field_email_details'] = $field_email_details;
+}
