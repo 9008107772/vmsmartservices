@@ -73,6 +73,8 @@
  */
 #}
 <article{{ attributes }}>
+
+	{% if node.field_banner_panel.value == '1' %}
     <!-- slider-area-start -->
     <div class="slider-area">
         <div class="slider-active owl-carousel">
@@ -97,8 +99,9 @@
            
         </div>
     </div>
+	{% endif %}
     <!-- slider-area-end -->
-
+	{% if node.field_banner_services_panel.value == '1' %}
     <!-- brand-area-start -->
     <div class="brand-area">
         <div class="container">
@@ -116,7 +119,8 @@
         </div>
     </div>
     <!-- brand-area-end -->
-
+	{% endif %}
+    {% if node.field_our_services.value == '1' %}
     <!-- service-area-start -->
     <div class="service-area">
         <div class="container">
@@ -146,13 +150,14 @@
             </div>
         </div>
     </div>
+	{% endif %}
     <!-- service-area-end -->
-
+	{% if node.field_our_services_carousel.value == '1' %}
     <!-- project-area-start -->
     <div class="project-area overlay" style="background-image:url({{file_url(node.field_image.entity.uri.value)}})">
         <div class="container-fluid p-lg-0">
             <div class="row justify-content-end no-gutters">
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-6 col-md-6 pr-5">
                     <div class="section-title text-white mb-65 ml-80">
                         <h3>{{node.field_service_title.value}}</h3>
                         <div class="global-desc">{{node.field_service_description.value|raw}}</div>
@@ -161,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-md-6">
+                <div class="col-xl-6 col-md-6 pr-5">
                     <div class="project-active owl-carousel">
 					{% for i, home_our_services_carousel  in node.field_home_our_services_carousel  %}
                         <div class="single-project">
@@ -181,23 +186,30 @@
         </div>
     </div>
     <!-- project-area-end -->
-
+	{% endif %}
+	
     <!-- about start -->
     <div class="about-area section-padding">
         <div class="pattent-bg-img">
             <img src="/{{ directory }}/img/about/pattern.png" alt="">
         </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-7 col-md-12 col-lg-6">
+        <div class="container-fluid">
+		{% if node.field_about_panel.value == '1' %}
+			<div class="row align-items-center justify-content-center">
+                <div class="section-title text-center mb-65">
+                    <div class="global-title">{{node.field_about_title.value}}</div>
+                    <div class="global-desc">{{node.field_about_sub_title.value}}</div>
+                </div>
+            </div>
+			
+            <div class="row align-items-center mb-65 ml-80">
+                <div class="col-xl-6 col-md-6">
                     <div class="about-thumb">
                         <img src="{{file_url(node.field_about_image.entity.uri.value)}}" alt="">
                     </div>
                 </div>
-                <div class="col-xl-5 col-md-12 col-lg-6">
+                <div class="col-xl-6 col-md-6 pr-5">
                     <div class="section-title mb-65">
-                         <div class="global-title">{{node.field_about_title.value}}</div>
-                         <div class="global-desc">{{node.field_about_sub_title.value}}</div>
 						   <div class="global-desc">
 							   {{node.field_ab.value|raw}}
 							</div>
@@ -205,11 +217,13 @@
                     </div>
                 </div>
             </div>
-            <div class="about-pro-active owl-carousel pt-120">
+		{% endif %}
+			{% if node.field_comments_panel.value == '1' %}
+            <div class="about-pro-active owl-carousel pt-80">
 			
 			{% for i, home_comments_panel  in node.field_home_comments_panel  %}
-                <div class="row align-items-center">
-                    <div class="col-xl-12 col-md-12 col-lg-12">
+                <div class="row align-items-center ml-80">
+                    <div class="col-xl-12 col-md-12">
                         <div class="about-info-text">
                             <div class="quote">
                                 <i class="Flaticon flaticon-quote"></i>
@@ -238,6 +252,7 @@
              
              
             </div>
+			{% endif %}
         </div>
     </div>
     <!-- about end -->

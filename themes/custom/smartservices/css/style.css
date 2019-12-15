@@ -312,10 +312,32 @@ h3 {
 }
 
 .boxed-btn:hover {
-	background: transparent;
-	color: #EF4334 !important;
-	border: 1px solid #EF4334
+	background: #00b2d6;
+	color: #FFFFFF !important;
+	border: 1px solid #00b2d6;
+	font-size: 16px;
+	font-weight: 400;
 }
+#edit-submit {
+	background: #EF4334;
+	color: #fff;
+	display: inline-block;
+	padding: 13px 32px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	border: 0;
+	border: 1px solid transparent
+}
+
+#edit-submit:hover {
+	background: #EF4334;
+	color: #FFFFFF !important;
+	border: 1px solid #EF4334;
+	font-size: 16px;
+	font-weight: 400;
+}
+
 
 .boxed-btn:focus {
 	outline: none;
@@ -1622,7 +1644,6 @@ h3 {
 
 .addres-area .single-address {
 	position: relative;
-	margin-top: 53px;
 	z-index: 0
 }
 
@@ -2137,6 +2158,33 @@ h3 {
 	font-size: 13px;
 	background: transparent
 }
+#user-login-form label {
+	font-size: 14px;
+	font-weight:bold;
+	color: #FFFFFF;
+}
+#user-login-form .description {
+	font-size: 14px;
+	font-weight:bold;
+	color: red;
+}
+#user-login-form .form-text {
+	border: 1px solid #e5e6e9;
+	border-radius: 0px;
+	height: 48px;
+	padding-left: 18px;
+	font-size: 13px;
+	background: #FFFFFF;
+}
+#user-login-form .form-control:focus {
+	outline: 0;
+	box-shadow: none
+}
+
+#user-login-form .form-control::placeholder {
+	font-weight: 300;
+	color: #999999
+}
 
 .form-contact .form-control:focus {
 	outline: 0;
@@ -2536,8 +2584,8 @@ h3 {
 .addres-area{
 	background-color: #00b2d6;
 	color:#FFFFFF;
-	padding-top:80px;
-	padding-bottom:100px;
+	padding-top:60px;
+	padding-bottom:60px;
 }
 
 .footer-area .copyright_part_text p {
@@ -5579,8 +5627,13 @@ h6 {
 form.user-login-form{
 	margin: 0 auto;
     width: 50%;
-    padding-bottom: 100px;
-    padding-top: 100px;
+	margin-bottom: 100px;
+	margin-top: 100px;
+	background:#00b2d6 !important;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+	padding-left: 100px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 @media (max-width: 576px) {

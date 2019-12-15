@@ -6,7 +6,7 @@
  */
 use Drupal\node\Entity\Node;
 function smartservices_preprocess(&$variables, $hook) {
-	$nids = \Drupal::entityQuery('node')->condition('type','global_contact')->execute();
+	$nids = \Drupal::entityQuery('node')->condition('type','global_contact')->sort('changed' , 'DESC')->range(0,1)->execute();
 	$field_address_details = '';
 	$field_mobile_details = '';
 	$field_email_details = '';
