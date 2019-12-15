@@ -10,13 +10,16 @@ function smartservices_preprocess(&$variables, $hook) {
 	$field_address_details = '';
 	$field_mobile_details = '';
 	$field_email_details = '';
+	$field_image = '';
 	foreach($nids as $key=>$value){
 		$nodes =  \Drupal::entityManager()->getStorage('node')->load($value);
 		$field_address_details = $nodes->field_address_details->value;
 		$field_mobile_details = $nodes->field_mobile_details->value;
 		$field_email_details = $nodes->field_email_details->value;
+		$field_image = file_create_url($nodes->field_image->entity->uri->value);
 	}
 	$variables['field_address_details'] = $field_address_details;
 	$variables['field_mobile_details'] = $field_mobile_details;
 	$variables['field_email_details'] = $field_email_details;
+	$variables['field_image'] = $field_image;
 }
