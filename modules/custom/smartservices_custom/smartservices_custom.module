@@ -24,4 +24,30 @@ function smartservices_custom_toolbar_alter(&$items) {
 		}
 	}
 }
+/**
+ * Implements hook_form_alter().
+ */
+function smartservices_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+	if (isset($form['promote']['#access'])) {
+		$form['promote']['#access'] = FALSE;
+	}
+	if (isset($form['sticky']['#access'])) {
+		$form['sticky']['#access'] = FALSE;
+	}
+	if (isset($form['menu']['#access'])) {
+		$form['menu']['#access'] = FALSE;
+	}
+	if (isset($form['revision_log']['#access'])) {
+		$form['revision_log']['#access'] = FALSE;
+	}
+}
+/**
+* Implementation of hook_node_presave().
+*
+*/
 
+function smartservices_custom_node_presave(\Drupal\node\NodeInterface $node) {
+	if ($node->getType() == 'money_transfer') {
+		$node->title = 'Money Transfer';
+	}
+}
