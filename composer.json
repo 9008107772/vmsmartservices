@@ -25,12 +25,10 @@
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/devel": "^2.1",
-        "drupal/entity_print": "^2.1",
         "drupal/field_group": "^3.0",
         "drupal/paragraphs": "^1.10",
         "drupal/toolbar_menu": "^2.1",
         "drupal/twig_tweak": "^2.4",
-        "drupal/webform": "^5.6",
         "wikimedia/composer-merge-plugin": "^1.4"
     },
     "conflict": {
