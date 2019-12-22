@@ -1,5 +1,11 @@
 <?php
 /**
+ * @file
+ * Contains smartservices_custom.module.
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+/**
  * Implements hook_toolbar_alter().
  */
 function smartservices_custom_toolbar_alter(&$items) {
@@ -40,6 +46,22 @@ function smartservices_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInte
 	if (isset($form['revision_log']['#access'])) {
 		$form['revision_log']['#access'] = FALSE;
 	}
+	if ($form_state->getFormObject() instanceof \Drupal\Core\Entity\EntityFormInterface) {
+		$entity_type = $form_state->getFormObject()->getEntity()->getEntityTypeId();
+	}
+	if(isset($entity_type)){
+	  if($entity_type == 'node'){
+		  foreach (array_keys($form['actions']) as $action) {
+			if (isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+			  $form['actions'][$action]['#submit'][] = 'custom_form_submit_redirect';
+			}
+		  }
+	  }
+	}	
+}
+function custom_form_submit_redirect(&$form,  \Drupal\Core\Form\FormStateInterface $form_state) {
+	$url = Url::fromRoute('system.admin_content');
+	$form_state->setRedirectUrl($url);
 }
 /**
 * Implementation of hook_node_presave().
@@ -49,5 +71,29 @@ function smartservices_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInte
 function smartservices_custom_node_presave(\Drupal\node\NodeInterface $node) {
 	if ($node->getType() == 'mobile') {
 		$node->title = 'Mobile Recharge';
+	}
+	if ($node->getType() == 'dth') {
+		$node->title = 'DTH';
+	}
+	if ($node->getType() == 'data_card') {
+		$node->title = 'Data Card';
+	}
+	if ($node->getType() == 'electricity') {
+		$node->title = 'Electricity';
+	}
+	if ($node->getType() == 'gas') {
+		$node->title = 'Gas';
+	}
+	if ($node->getType() == 'insurance') {
+		$node->title = 'Insurance';
+	}
+	if ($node->getType() == 'new_dmr') {
+		$node->title = 'New DMR';
+	}
+	if ($node->getType() == 'postpaid') {
+		$node->title = 'Post Paid';
+	}
+	if ($node->getType() == 'utilities') {
+		$node->title = 'Utilities';
 	}
 }

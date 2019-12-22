@@ -799,6 +799,7 @@ $settings['entity_update_backup'] = TRUE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+$settings['trusted_host_patterns'] = [ '.*' ];
 $databases['default']['default'] = array (
   'database' => 'smartservices',
   'username' => 'root',

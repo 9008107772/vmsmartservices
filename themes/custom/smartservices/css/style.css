@@ -1174,13 +1174,13 @@ h3 {
 }
 
 .service-details {
-	padding-top: 120px;
-	padding-bottom: 80px
+	padding-top: 50px;
+	padding-bottom: 50px
 }
 
 @media (max-width: 767px) {
 	.service-details {
-		padding-top: 60px;
+		padding-top: 30px;
 		padding-bottom: 20px
 	}
 }
