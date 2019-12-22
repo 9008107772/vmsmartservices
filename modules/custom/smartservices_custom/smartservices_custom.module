@@ -47,7 +47,7 @@ function smartservices_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInte
 */
 
 function smartservices_custom_node_presave(\Drupal\node\NodeInterface $node) {
-	if ($node->getType() == 'money_transfer') {
-		$node->title = 'Money Transfer';
+	if ($node->getType() == 'mobile') {
+		$node->title = 'Mobile Recharge';
 	}
 }

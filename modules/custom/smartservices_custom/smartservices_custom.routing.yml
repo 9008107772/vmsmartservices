@@ -1,0 +1,8 @@
+system.admin_money_transfer:
+  path: '/admin/dashboard'
+  defaults:
+    _controller: '\Drupal\smartservices_custom\Controller\SmartservicesController::dashboard'
+    link_id: 'system.admin_money_transfer'
+    _title: 'Money Transfer'
+  requirements:
+    _permission: 'access administration pages'
