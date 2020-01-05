@@ -46,6 +46,24 @@ function smartservices_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInte
 	if (isset($form['revision_log']['#access'])) {
 		$form['revision_log']['#access'] = FALSE;
 	}
+	if($form_id == 'node_mobile_form' || $form_id == 'node_mobile_edit_form'){
+		$form['actions']['submit']['#value'] = 'Recharge';
+	}
+	if($form_id == 'node_dth_form' || $form_id == 'node_dth_edit_form'){
+		$form['actions']['submit']['#value'] = 'Recharge';
+	}
+	if($form_id == 'node_data_card_form' || $form_id == 'node_data_card_edit_form'){
+		$form['actions']['submit']['#value'] = 'Recharge';
+	}
+	if($form_id == 'node_postpaid_form' || $form_id == 'node_postpaid_edit_form'){
+		$form['actions']['submit']['#value'] = 'Recharge';
+	}
+	if($form_id == 'node_insurance_form' || $form_id == 'node_insurance_edit_form'){
+		$form['actions']['submit']['#value'] = 'Recharge';
+	}
+	if($form_id == 'node_gas_form' || $form_id == 'node_gas_edit_form'){
+		$form['actions']['submit']['#value'] = 'Recharge';
+	}
 	if ($form_state->getFormObject() instanceof \Drupal\Core\Entity\EntityFormInterface) {
 		$entity_type = $form_state->getFormObject()->getEntity()->getEntityTypeId();
 	}

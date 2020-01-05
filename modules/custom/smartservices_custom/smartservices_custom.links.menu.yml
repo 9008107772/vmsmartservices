@@ -1,6 +1,0 @@
-system.admin_money_transfer:
-  title: Money Transfer
-  description: 'Find and manage Money Transfer.'
-  route_name: view.money_transfer.page_1
-  parent: system.admin
-  weight: -11
