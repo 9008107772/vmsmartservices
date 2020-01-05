@@ -76,20 +76,49 @@
 	<div class="container pt-5 mb-5">
 	  <div class="page-header">
 		 <h3>{{ node.title.value }}</h3>
+		 <hr class="style9">
 	  </div>
-	  <hr class="style9">
-		<div class="col-xl-4">
-			<div class="details-nav">
-				<nav>
-					<ul class="nav" id="myTab" role="tablist">
-					{% for servicedetail in node.field_services %}
-						<li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-								aria-controls="home" aria-selected="true">{{servicedetail.entity.name.value}}</a>
-						</li>
+		<div class="row service-lists">
+			<div class="col-xl-4">
+				<div class="details-nav">
+					<nav>
+						<ul class="nav" id="myTab" role="tablist">
+						{% for servicedetail in node.field_services %}
+							<li class="nav-item">
+								<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">{{servicedetail.entity.name.value}}</a>
+							</li>
 						{% endfor %}
-					</ul>
-				</nav>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="col-xl-8">
+				<div class="single-details">
+					<div class="tab-content" id="myTabContent">
+						{% for servicedetail in node.field_services %}
+						<div class="tab-pane fade" id="{{servicedetail.entity.name.value}}" role="tabpanel" aria-labelledby="home-tab">
+							<div class="row">
+							  {% for operatorlistsitem in operatorlists %}
+								  {% if operatorlistsitem.target_id == servicedetail.entity.tid.value %}
+									<div class="col-xl-4 col-md-4">
+										<a href="/smartservices/services" class="myBtn">
+											<div class="single-project">
+												<div class="project-thumb">
+													<img src="{{ operatorlistsitem.image }}" alt="{{ operatorlistsitem.name }}" class="img-thumbnail">
+												</div>
+												<div class="project-info">
+													<h3 class="text-center">{{ operatorlistsitem.name }}</h3>
+												</div>
+											</div>
+										</a>
+									</div>
+								  {% endif %}
+							  {% endfor %}
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

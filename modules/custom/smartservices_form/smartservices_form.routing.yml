@@ -1,0 +1,8 @@
+smartservices_customform.form:
+  path: '/services'
+  defaults:
+    _controller: '\Drupal\smartservices_form\Controller\SmartservicesController::content'
+    _title: 'Custom Form Services'
+  requirements:
+    _permission: 'access content'
+    

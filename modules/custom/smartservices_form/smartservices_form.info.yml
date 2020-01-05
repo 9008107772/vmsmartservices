@@ -1,0 +1,6 @@
+name: Custom Module Smart Services Forms
+type: module
+description: 'Smartservices Forms'
+package: Custom
+core: 8.x
+hidden: false

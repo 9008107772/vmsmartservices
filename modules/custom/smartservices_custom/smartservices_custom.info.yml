@@ -1,5 +1,5 @@
 name: Custom Module Smart Services
 type: module
-description: Custom
+description: 'Smartservices Custom'
 package: Custom
 core: 8.x
