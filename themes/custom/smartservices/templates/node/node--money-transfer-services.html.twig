@@ -83,14 +83,29 @@
 				<div class="details-nav">
 					<nav>
 						<ul class="nav" id="myTab" role="tablist">
-						{% for servicedetail in node.field_services %}
-							<li class="nav-item">
-								<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">
-								<img src="{{file_url(servicedetail.entity.field_service_image.entity.uri.value)}}" class="service-img-thumbnail" /> 
-								<span>{{servicedetail.entity.name.value}}</span>
-								</a>
-							</li>
-						{% endfor %}
+						{% if role_current_user == 'administrator' %}
+							{% for servicedetail in node.field_services %}
+								<li class="nav-item">
+									<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">
+									<img src="{{file_url(servicedetail.entity.field_service_image.entity.uri.value)}}" class="service-img-thumbnail" /> 
+									<span>{{servicedetail.entity.name.value}}</span>
+									</a>
+								</li>
+							{% endfor %}
+						{% else %}
+							{% for servicedetail in node.field_services %}
+								{% for roleservicedetail in service_list_current_user %}
+									{% if servicedetail.entity.tid.value == roleservicedetail.current_service_id %}
+										<li class="nav-item">
+											<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">
+											<img src="{{file_url(servicedetail.entity.field_service_image.entity.uri.value)}}" class="service-img-thumbnail" /> 
+											<span>{{servicedetail.entity.name.value}}</span>
+											</a>
+										</li>
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+						{% endif %}
 						</ul>
 					</nav>
 				</div>

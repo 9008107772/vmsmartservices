@@ -36,4 +36,12 @@ function smartservices_preprocess(&$variables, $hook) {
 								'image' => $image);
 	}
 	$variables['operatorlists'] = $commission_value;
+	$user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id()); 
+    $service_list_current_user = array();	
+	foreach($user->field_services as $servicelist){
+		$service_list_current_user[] = array('current_service_id' => $servicelist->target_id);
+	}
+	$variables['current_id'] = \Drupal::currentUser()->id();
+	$variables['role_current_user'] = $user->roles->target_id;
+	$variables['service_list_current_user'] = $service_list_current_user;
 }

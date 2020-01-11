@@ -49,9 +49,12 @@
 .slicknav_nav {
   clear: both; }
   .slicknav_nav ul {
-    display: block; }
+    display: block; 
+	}
   .slicknav_nav li {
-    display: block; }
+    display: block; 
+	border-bottom: 1px solid #FFF;
+	}
   .slicknav_nav .slicknav_arrow {
     font-size: 0.8em;
     margin: 0 0 0 0.4em; }
@@ -110,7 +113,7 @@
       background: #ccc;
       color: #fff; }
   .slicknav_nav a {
-    padding: 5px 10px;
+    padding: 15px 10px;
     margin: 2px 5px;
     text-decoration: none;
     color: #fff; }
@@ -192,7 +195,7 @@
   padding: 0;
 }
 .slicknav_icon-bar {
-    background: #212121 !important;
+    background: #FFFFFF !important;
 }
 .slicknav_nav {
 	background: #fff;
@@ -212,8 +215,8 @@
 .slicknav_nav a {
     font-size: 14px;
     font-weight: 400;
-    color: #000;
-    text-transform: capitalize;
+    color: #FFF;
+    text-transform: uppercase;
 }
 
 .slicknav_nav .slicknav_arrow {

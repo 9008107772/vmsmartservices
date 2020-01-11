@@ -110,7 +110,7 @@
                     <div class="brand-active owl-carousel">
 						{% for i, home_carousel_services_panel in node.field_home_carousel_services_pan  %}
                         <div class="single-brand">
-                            <img src="{{file_url(home_carousel_services_panel.entity.field_service_image.entity.uri.value | image_style('service_logo'))}}" alt="">
+                            <img src="{{file_url(home_carousel_services_panel.entity.field_service_image.entity.uri.value)}}" alt="">
                         </div>
 						{% endfor %}
                     </div>
