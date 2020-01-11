@@ -14,7 +14,7 @@ $(window).on('scroll', function () {
 
 
 $(document).ready(function(){
-
+	
 // mobile_menu
 var menu = $('ul#navigation');
 if(menu.length){

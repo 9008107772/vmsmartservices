@@ -119,7 +119,7 @@
 							  {% for operatorlistsitem in operatorlists %}
 								  {% if operatorlistsitem.target_id == servicedetail.entity.tid.value %}
 									<div class="col-xl-4 col-md-4">
-										<a href="/smartservices/services" class="myBtn">
+										<a href="/smartservices/services/{{servicedetail.entity.tid.value}}/{{ operatorlistsitem.tid }}" class="myBtn">
 											<div class="single-project">
 												<div class="project-thumb">
 													<img src="{{ operatorlistsitem.image }}" alt="{{ operatorlistsitem.name }}" class="img-thumbnail">
