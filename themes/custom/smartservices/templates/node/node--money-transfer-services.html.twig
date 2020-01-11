@@ -73,7 +73,7 @@
  */
 #}
 <div class="service-details">
-	<div class="container pt-5 mb-5">
+	<div class="container service-wrapper pt-5 mb-5">
 	  <div class="page-header">
 		 <h3>{{ node.title.value }}</h3>
 		 <hr class="style9">
@@ -85,14 +85,17 @@
 						<ul class="nav" id="myTab" role="tablist">
 						{% for servicedetail in node.field_services %}
 							<li class="nav-item">
-								<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">{{servicedetail.entity.name.value}}</a>
+								<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">
+								<img src="{{file_url(servicedetail.entity.field_service_image.entity.uri.value)}}" class="service-img-thumbnail" /> 
+								<span>{{servicedetail.entity.name.value}}</span>
+								</a>
 							</li>
 						{% endfor %}
 						</ul>
 					</nav>
 				</div>
 			</div>
-			<div class="col-xl-8">
+			<div class="col-xl-8 serivce-list-item">
 				<div class="single-details">
 					<div class="tab-content" id="myTabContent">
 						{% for servicedetail in node.field_services %}
