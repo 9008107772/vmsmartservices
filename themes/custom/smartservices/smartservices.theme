@@ -5,6 +5,7 @@
  * Functions to support theming in the Bartik theme.
  */
 use Drupal\node\Entity\Node;
+use Drupal\image\Entity\ImageStyle;
 function smartservices_preprocess(&$variables, $hook) {
 	$nids = \Drupal::entityQuery('node')->condition('type','global_contact')->sort('changed' , 'DESC')->range(0,1)->execute();
 	$field_address_details = '';
@@ -28,7 +29,8 @@ function smartservices_preprocess(&$variables, $hook) {
 	foreach ($tree as $term_child) {
 		$image = '';
 		if(isset($term_child->field_operator_image->entity->uri->value)){
-			$image = file_create_url($term_child->field_operator_image->entity->uri->value);
+			$convert_image_Style = ImageStyle::load('thumbnail')->buildUrl($term_child->field_operator_image->entity->uri->value);
+			$image = file_create_url($convert_image_Style);
 		}
 		$commission_value[] = array('name' => $term_child->getName(),
 								'tid' => $term_child->id(),
@@ -44,4 +46,15 @@ function smartservices_preprocess(&$variables, $hook) {
 	$variables['current_id'] = \Drupal::currentUser()->id();
 	$variables['role_current_user'] = $user->roles->target_id;
 	$variables['service_list_current_user'] = $service_list_current_user;
+	
+	$current_path = \Drupal::service('path.current')->getPath();
+	$service_dynamic_arr = explode('/',$current_path);
+	if(isset($service_dynamic_arr[2])){
+		$term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($service_dynamic_arr[2]);
+		$variables['service_name_dynamic'] = $term->name->value;
+	}
+	if(isset($service_dynamic_arr[3])){
+		$term_arr = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($service_dynamic_arr[3]);
+		$variables['service_name_operator'] = $term_arr->name->value;
+	}
 }

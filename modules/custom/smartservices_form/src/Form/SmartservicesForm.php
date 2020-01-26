@@ -30,19 +30,67 @@ class SmartservicesForm extends FormBase {
   /**
    * {@inheritdoc}.
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state,$parent = NULL,$child = NULL) {
 
-    $form['phone_number'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Mobile Number'),
-      '#maxlength' => 15,
-    );
+	if($parent == '1'){
+		$form['phone_number'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Mobile Number'),
+		  '#maxlength' => 15,
+		);
 
-    $form['amount'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Amount'),
-      '#maxlength' => 15,
-    );
+		$form['amount'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Amount'),
+		  '#maxlength' => 15,
+		);
+	}
+	if($parent == '2'){
+		$form['phone_number'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Customer ID'),
+		  '#maxlength' => 15,
+		);
+
+		$form['amount'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Recharge Amount'),
+		  '#maxlength' => 15,
+		);
+	}
+	if($parent == '6'){
+		$form['phone_number'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Consumer Number'),
+		  '#maxlength' => 15,
+		);
+
+		$form['amount'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Bill Amount'),
+		  '#maxlength' => 15,
+		);
+	}
+	if($parent == '13'){
+		$form['phone_number'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Mobile Number'),
+		  '#maxlength' => 15,
+		);
+
+		$form['amount'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Amount'),
+		  '#maxlength' => 15,
+		);
+	}
+	if($parent == '5'){
+		$form['phone_number'] = array(
+		  '#type' => 'textfield',
+		  '#title' => $this->t('Customer ID'),
+		  '#maxlength' => 15,
+		);
+	}
 
     $form['submit'] = array(
       '#type' => 'submit',

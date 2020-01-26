@@ -1308,6 +1308,17 @@ h3 {
 	background:#fff;
     border-radius: 5px;
 }
+.service-details .serivce-list-item .single-project .project-thumb img{
+	width: 80%;
+	height: 150px;
+}
+.service-details .serivce-list-item .single-project .project-info h3{
+	color:#000;
+	padding:20px;
+	font-size: 18px;
+	line-height: 30px;
+}
+
 @media (max-width: 767px) {
 	.service-details .serivce-list-item{
 		max-width: 100%;
