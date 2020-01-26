@@ -86,7 +86,7 @@
 						{% if role_current_user == 'administrator' %}
 							{% for servicedetail in node.field_services %}
 								<li class="nav-item">
-									<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">
+									<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value|lower|replace({' ': '-'})}}" role="tab" aria-controls="home" aria-selected="false">
 									<img src="{{file_url(servicedetail.entity.field_service_image.entity.uri.value)}}" class="service-img-thumbnail" /> 
 									<span>{{servicedetail.entity.name.value}}</span>
 									</a>
@@ -97,7 +97,7 @@
 								{% for roleservicedetail in service_list_current_user %}
 									{% if servicedetail.entity.tid.value == roleservicedetail.current_service_id %}
 										<li class="nav-item">
-											<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value}}" role="tab" aria-controls="home" aria-selected="false">
+											<a class="nav-link" id="home-tab" data-toggle="tab" href="#{{servicedetail.entity.name.value|lower|replace({' ': '-'})}}" role="tab" aria-controls="home" aria-selected="false">
 											<img src="{{file_url(servicedetail.entity.field_service_image.entity.uri.value)}}" class="service-img-thumbnail" /> 
 											<span>{{servicedetail.entity.name.value}}</span>
 											</a>
@@ -114,7 +114,7 @@
 				<div class="single-details">
 					<div class="tab-content" id="myTabContent">
 						{% for servicedetail in node.field_services %}
-						<div class="tab-pane fade" id="{{servicedetail.entity.name.value}}" role="tabpanel" aria-labelledby="home-tab">
+						<div class="tab-pane fade" id="{{servicedetail.entity.name.value|lower|replace({' ': '-'})}}" role="tabpanel" aria-labelledby="home-tab">
 							<div class="row">
 							  {% for operatorlistsitem in operatorlists %}
 								  {% if operatorlistsitem.target_id == servicedetail.entity.tid.value %}
