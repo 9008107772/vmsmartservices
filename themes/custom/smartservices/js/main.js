@@ -14,6 +14,11 @@ $(window).on('scroll', function () {
 
 
 $(document).ready(function(){
+$(document).on("click", ".service-details .service-lists #myTab li" , function() {
+	if(!$('.service-details .serivce-list-item .single-details .tab-pane.active .row .operator-list-check').length){
+		$('.service-details .serivce-list-item .single-details .tab-pane.active .row').html("<p class='empty-services'>We are not providing any services selected category. Please select some other category.</p>");
+	}
+});
 	
 // mobile_menu
 var menu = $('ul#navigation');

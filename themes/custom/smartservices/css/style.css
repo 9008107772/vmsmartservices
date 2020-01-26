@@ -1318,6 +1318,12 @@ h3 {
 	font-size: 18px;
 	line-height: 30px;
 }
+.service-details .serivce-list-item .empty-services{
+	padding: 20px;
+	font-size: 20px;
+	line-height: 36px;
+	color:#000;
+}
 
 @media (max-width: 767px) {
 	.service-details .serivce-list-item{
