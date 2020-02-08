@@ -931,21 +931,21 @@
     },
     {
         "name": "drupal/back_to_top",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/back_to_top.git",
-            "reference": "8.x-1.0"
+            "reference": "8.x-1.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/back_to_top-8.x-1.0.zip",
-            "reference": "8.x-1.0",
-            "shasum": "28e17327f779bad5140ab55ef071a5f6727adbd7"
+            "url": "https://ftp.drupal.org/files/projects/back_to_top-8.x-1.1.zip",
+            "reference": "8.x-1.1",
+            "shasum": "5698e1c440561fdb109bb15816bdf6332f9bbb8f"
         },
         "require": {
-            "drupal/core": "~8.0"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
@@ -953,8 +953,8 @@
                 "dev-1.x": "1.x-dev"
             },
             "drupal": {
-                "version": "8.x-1.0",
-                "datestamp": "1536664080",
+                "version": "8.x-1.1",
+                "datestamp": "1579012388",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -996,17 +996,17 @@
     },
     {
         "name": "drupal/core",
-        "version": "8.8.1",
-        "version_normalized": "8.8.1.0",
+        "version": "8.8.2",
+        "version_normalized": "8.8.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core.git",
-            "reference": "d339279f4c4b89477e0f4a8b775eb5dcb86b3087"
+            "reference": "f997857003276c2ae6d27db30f0eab9c7dd10e62"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core/zipball/d339279f4c4b89477e0f4a8b775eb5dcb86b3087",
-            "reference": "d339279f4c4b89477e0f4a8b775eb5dcb86b3087",
+            "url": "https://api.github.com/repos/drupal/core/zipball/f997857003276c2ae6d27db30f0eab9c7dd10e62",
+            "reference": "f997857003276c2ae6d27db30f0eab9c7dd10e62",
             "shasum": ""
         },
         "require": {
@@ -1172,7 +1172,7 @@
             "drupal/workflows": "self.version",
             "drupal/workspaces": "self.version"
         },
-        "time": "2019-12-18T10:34:03+00:00",
+        "time": "2020-02-01T19:51:15+00:00",
         "type": "drupal-core",
         "extra": {
             "drupal-scaffold": {
@@ -1228,8 +1228,8 @@
     },
     {
         "name": "drupal/core-composer-scaffold",
-        "version": "8.8.1",
-        "version_normalized": "8.8.1.0",
+        "version": "8.8.2",
+        "version_normalized": "8.8.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1277,8 +1277,8 @@
     },
     {
         "name": "drupal/core-project-message",
-        "version": "8.8.1",
-        "version_normalized": "8.8.1.0",
+        "version": "8.8.2",
+        "version_normalized": "8.8.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-project-message.git",
@@ -1317,17 +1317,17 @@
     },
     {
         "name": "drupal/core-recommended",
-        "version": "8.8.1",
-        "version_normalized": "8.8.1.0",
+        "version": "8.8.2",
+        "version_normalized": "8.8.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-recommended.git",
-            "reference": "a2215237489ccb456219bd30b26649e6899b6f35"
+            "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/a2215237489ccb456219bd30b26649e6899b6f35",
-            "reference": "a2215237489ccb456219bd30b26649e6899b6f35",
+            "url": "https://api.github.com/repos/drupal/core-recommended/zipball/67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
+            "reference": "67ed5b68da2784ead5a55330c6c0fde6bb3cb9f3",
             "shasum": ""
         },
         "require": {
@@ -1340,7 +1340,7 @@
             "doctrine/common": "v2.7.3",
             "doctrine/inflector": "v1.2.0",
             "doctrine/lexer": "1.0.2",
-            "drupal/core": "8.8.1",
+            "drupal/core": "8.8.2",
             "easyrdf/easyrdf": "0.9.1",
             "egulias/email-validator": "2.1.11",
             "guzzlehttp/guzzle": "6.3.3",
@@ -1388,7 +1388,7 @@
         "conflict": {
             "webflo/drupal-core-strict": "*"
         },
-        "time": "2019-12-18T10:34:03+00:00",
+        "time": "2020-02-01T19:51:15+00:00",
         "type": "metapackage",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -1398,8 +1398,8 @@
     },
     {
         "name": "drupal/core-vendor-hardening",
-        "version": "8.8.1",
-        "version_normalized": "8.8.1.0",
+        "version": "8.8.2",
+        "version_normalized": "8.8.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core-vendor-hardening.git",
@@ -1593,21 +1593,21 @@
     },
     {
         "name": "drupal/field_group",
-        "version": "3.0.0-rc2",
-        "version_normalized": "3.0.0.0-RC2",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/field_group.git",
-            "reference": "8.x-3.0-rc2"
+            "reference": "8.x-3.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.0-rc2.zip",
-            "reference": "8.x-3.0-rc2",
-            "shasum": "53a9f55fa579b881a5fe12a3c84702e52a3d0737"
+            "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.0.zip",
+            "reference": "8.x-3.0",
+            "shasum": "8d87cdc4abc417aa4d411bffcaeb0a3ef1afa497"
         },
         "require": {
-            "drupal/core": "*"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
@@ -1615,11 +1615,11 @@
                 "dev-3.x": "3.x-dev"
             },
             "drupal": {
-                "version": "8.x-3.0-rc2",
-                "datestamp": "1574279719",
+                "version": "8.x-3.0",
+                "datestamp": "1580250787",
                 "security-coverage": {
-                    "status": "not-covered",
-                    "message": "RC releases are not covered by Drupal security advisories."
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
                 }
             }
         },
@@ -1642,12 +1642,12 @@
                 "homepage": "https://www.drupal.org/user/591438"
             },
             {
-                "name": "swentel",
-                "homepage": "https://www.drupal.org/user/107403"
+                "name": "nils.destoop",
+                "homepage": "https://www.drupal.org/user/361625"
             },
             {
-                "name": "zuuperman",
-                "homepage": "https://www.drupal.org/user/361625"
+                "name": "swentel",
+                "homepage": "https://www.drupal.org/user/107403"
             }
         ],
         "description": "Provides the field_group module.",
@@ -4127,17 +4127,17 @@
     },
     {
         "name": "symfony/var-dumper",
-        "version": "v3.4.36",
-        "version_normalized": "3.4.36.0",
+        "version": "v3.4.37",
+        "version_normalized": "3.4.37.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/var-dumper.git",
-            "reference": "569e261461600810845a8305ca3f64abd3e712c0"
+            "reference": "51ecb139114c38080801145a212f10210ea99ea3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/569e261461600810845a8305ca3f64abd3e712c0",
-            "reference": "569e261461600810845a8305ca3f64abd3e712c0",
+            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/51ecb139114c38080801145a212f10210ea99ea3",
+            "reference": "51ecb139114c38080801145a212f10210ea99ea3",
             "shasum": ""
         },
         "require": {
@@ -4156,7 +4156,7 @@
             "ext-intl": "To show region name in time zone dump",
             "ext-symfony_debug": ""
         },
-        "time": "2019-10-10T11:03:19+00:00",
+        "time": "2020-01-01T11:03:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {

@@ -20,7 +20,7 @@
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
         "drupal/back_to_top": "^1.0",
-        "drupal/core": "^8.8.1",
+        "drupal/core": "^8.8.2",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
