@@ -19,6 +19,8 @@ $(document).on("click", ".service-details .service-lists #myTab li" , function()
 		$('.service-details .serivce-list-item .single-details .tab-pane.active .row').html("<p class='empty-services'>We are not providing any services selected category. Please select some other category.</p>");
 	}
 });
+
+$('.service-lists nav ul li.nav-item:first a').trigger('click');
 	
 // mobile_menu
 var menu = $('ul#navigation');

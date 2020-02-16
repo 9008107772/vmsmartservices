@@ -55,6 +55,8 @@ function smartservices_preprocess(&$variables, $hook) {
 	}
 	if(isset($service_dynamic_arr[3])){
 		$term_arr = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($service_dynamic_arr[3]);
-		$variables['service_name_operator'] = $term_arr->name->value;
+		if(!empty($term_arr)){
+			$variables['service_name_operator'] = $term_arr->name->value;
+		}
 	}
 }

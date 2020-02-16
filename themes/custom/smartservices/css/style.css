@@ -1157,12 +1157,16 @@ h3 {
 	.brand-area .brand-active .single-brand img {
 		height:100%;
 	}
+	.service-area .service-item{
+		margin-bottom:50px;
+	}
 }
 
 .service-area {
 	padding-top: 120px;
 	padding-bottom: 120px
 }
+
 
 .service-area .single-service .service-thumb {
 	margin-bottom: 39px

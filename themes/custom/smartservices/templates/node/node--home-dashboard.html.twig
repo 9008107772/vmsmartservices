@@ -103,7 +103,7 @@
     <!-- slider-area-end -->
 	{% if node.field_banner_services_panel.value == '1' %}
     <!-- brand-area-start -->
-    <div class="brand-area">
+    <!--<div class="brand-area">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -117,7 +117,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- brand-area-end -->
 	{% endif %}
     {% if node.field_our_services.value == '1' %}
@@ -132,7 +132,7 @@
             </div>
             <div class="row">
 			{% for i, home_our_services_panel in node.field_home_our_services_panel  %}
-                <div class="col-xl-4 col-md-4">
+                <div class="col-xl-4 col-md-4 service-item">
                     <div class="single-service">
                         <div class="service-thumb">
                             <img src="{{file_url(home_our_services_panel.entity.field_service_image.entity.uri.value)}}" alt="" class="img-thumbnail">
