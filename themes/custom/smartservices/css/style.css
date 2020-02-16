@@ -1160,11 +1160,23 @@ h3 {
 	.service-area .service-item{
 		margin-bottom:50px;
 	}
+	.user-area{
+		width:25%;
+		position:absolute;
+	}
 }
 
 .service-area {
 	padding-top: 120px;
 	padding-bottom: 120px
+}
+.user-area .nav-item a{
+	color:#fff;
+	text-shadow: none;
+	font-weight:bold;
+}
+.user-area .nav-item .dropdown-menu a.dropdown-item{
+	color:#EF4334
 }
 
 
